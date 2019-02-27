@@ -8,16 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
   @IBOutlet weak var settingsButton: UIBarButtonItem!
   @IBOutlet weak var tableView: UITableView!
   
   var subjects = ["Mathematics", "Marvel Super Heroes", "Science"]
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     tableView.dataSource = self
+    tableView.delegate = self
+    print("ViewDidLoad")
+    print(subjects)
   }
 
 
@@ -27,13 +31,11 @@ class ViewController: UIViewController {
     self.present(alert, animated: true)
     
   }
-}
-
-extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell: QuizTableViewCell = tableView.dequeueReusableCell(withIdentifier: "quizCell", for: indexPath) as! QuizTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "quizCell", for: indexPath) as! QuizTableViewCell
     let subject = subjects[indexPath.row]
     cell.subject = subject
+    print(subject)
     cell.logo = UIImage(named: "test_image")
     return cell
   }
@@ -41,4 +43,20 @@ extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return subjects.count
   }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("You selected cell #\(indexPath.row)!")
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    switch segue.identifier! {
+    case "questionSegue":
+      let destination = segue.destination as! QuestionViewController
+      NSLog("Segue to Question Page")
+    default:
+      NSLog("Unknown segue identifier: \(segue.identifier!)")
+    }
+  }
 }
+
+
