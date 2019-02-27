@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UIPopoverControllerDelegate, UITableViewDataSource, UITableViewDelegate {
 
   @IBOutlet weak var settingsButton: UIBarButtonItem!
   @IBOutlet weak var tableView: UITableView!
@@ -40,6 +40,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
           } else {
             DispatchQueue.main.async { [unowned self] in
+              let alert = UIAlertController(title: "Error Downloading Data", message: "Don't worry, we'll load it from disk", preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in NSLog("\"OK\" pressed")}))
+              self.present(alert, animated: true)
               self.useJSON(self.loadJSONFromDisk())
             }
           }
@@ -54,6 +57,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     do {
       let savedJSON = try Data(contentsOf: fileURL)
       let jsonData =  try JSONSerialization.jsonObject(with: savedJSON, options: .mutableContainers) as! NSArray
+      NSLog("JSON successfully loaded from disk!")
       return jsonData
     } catch let error {
       NSLog("parse error: \(error.localizedDescription)")

@@ -11,6 +11,21 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="AYT-XF-UiE">
+            <objects>
+                <viewController id="2VY-Nk-S8f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="irl-tR-XWQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LX9-qb-h65"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9It-eN-p4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-811" y="207"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,7 +137,7 @@
                                     <navigationItem title="iQuiz" id="aRo-vA-3KG">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="pA9-ri-cr2">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="EDE-06-Sx5"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="quesitonToHome" id="EDE-06-Sx5"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -304,7 +319,7 @@
                                     <navigationItem title="iQuiz" id="1vv-4O-PDM">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="OJG-zx-rZd">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="aVg-j6-W7E"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="finishBackToHome" id="aVg-j6-W7E"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -319,7 +334,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="LZY-DB-lv8"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="finishToHome" id="LZY-DB-lv8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Perfect! Tubular!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzq-Vt-24l">
@@ -357,7 +372,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CgF-vy-FQV"/>
-        <segue reference="aVg-j6-W7E"/>
+        <segue reference="BKb-kO-hVZ"/>
+        <segue reference="EDE-06-Sx5"/>
     </inferredMetricsTieBreakers>
 </document>
