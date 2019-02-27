@@ -14,6 +14,7 @@
 		3D18DD50221E66020095D479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D18DD4E221E66020095D479 /* LaunchScreen.storyboard */; };
 		3D18DD5B221E66020095D479 /* iQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18DD5A221E66020095D479 /* iQuizTests.swift */; };
 		3D18DD66221E66020095D479 /* iQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18DD65221E66020095D479 /* iQuizUITests.swift */; };
+		3D920600221E7FF500EB3E8B /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9205FF221E7FF500EB3E8B /* QuizTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3D18DD61221E66020095D479 /* iQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D18DD65221E66020095D479 /* iQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iQuizUITests.swift; sourceTree = "<group>"; };
 		3D18DD67221E66020095D479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D9205FF221E7FF500EB3E8B /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		3D18DD44221E65FE0095D479 /* iQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				3D9205FF221E7FF500EB3E8B /* QuizTableViewCell.swift */,
 				3D18DD45221E65FE0095D479 /* AppDelegate.swift */,
 				3D18DD47221E65FE0095D479 /* ViewController.swift */,
 				3D18DD49221E65FE0095D479 /* Main.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				3D18DD48221E65FE0095D479 /* ViewController.swift in Sources */,
 				3D18DD46221E65FE0095D479 /* AppDelegate.swift in Sources */,
+				3D920600221E7FF500EB3E8B /* QuizTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
