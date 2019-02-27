@@ -15,6 +15,7 @@
 		3D18DD5B221E66020095D479 /* iQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18DD5A221E66020095D479 /* iQuizTests.swift */; };
 		3D18DD66221E66020095D479 /* iQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18DD65221E66020095D479 /* iQuizUITests.swift */; };
 		3D833A5122263537004EEE9F /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D833A5022263537004EEE9F /* QuestionViewController.swift */; };
+		3D833A532226460E004EEE9F /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D833A522226460E004EEE9F /* AnswerViewController.swift */; };
 		3D920600221E7FF500EB3E8B /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9205FF221E7FF500EB3E8B /* QuizTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		3D18DD65221E66020095D479 /* iQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iQuizUITests.swift; sourceTree = "<group>"; };
 		3D18DD67221E66020095D479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D833A5022263537004EEE9F /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		3D833A522226460E004EEE9F /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		3D9205FF221E7FF500EB3E8B /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				3D18DD45221E65FE0095D479 /* AppDelegate.swift */,
 				3D18DD47221E65FE0095D479 /* ViewController.swift */,
 				3D18DD49221E65FE0095D479 /* Main.storyboard */,
+				3D833A522226460E004EEE9F /* AnswerViewController.swift */,
 				3D18DD4C221E66020095D479 /* Assets.xcassets */,
 				3D18DD4E221E66020095D479 /* LaunchScreen.storyboard */,
 				3D18DD51221E66020095D479 /* Info.plist */,
@@ -264,6 +267,7 @@
 			files = (
 				3D18DD48221E65FE0095D479 /* ViewController.swift in Sources */,
 				3D18DD46221E65FE0095D479 /* AppDelegate.swift in Sources */,
+				3D833A532226460E004EEE9F /* AnswerViewController.swift in Sources */,
 				3D833A5122263537004EEE9F /* QuestionViewController.swift in Sources */,
 				3D920600221E7FF500EB3E8B /* QuizTableViewCell.swift in Sources */,
 			);

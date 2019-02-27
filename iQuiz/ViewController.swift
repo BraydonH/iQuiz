@@ -20,8 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Do any additional setup after loading the view, typically from a nib.
     tableView.dataSource = self
     tableView.delegate = self
-    print("ViewDidLoad")
-    print(subjects)
+    NSLog("ViewDidLoad")
   }
 
 
@@ -35,7 +34,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let cell = tableView.dequeueReusableCell(withIdentifier: "quizCell", for: indexPath) as! QuizTableViewCell
     let subject = subjects[indexPath.row]
     cell.subject = subject
-    print(subject)
     cell.logo = UIImage(named: "test_image")
     return cell
   }
@@ -45,7 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print("You selected cell #\(indexPath.row)!")
+    NSLog("You selected cell #\(indexPath.row)!")
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
