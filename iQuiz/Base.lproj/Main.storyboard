@@ -57,7 +57,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPD-iy-gvc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPD-iy-gvc">
                                                     <rect key="frame" x="61" y="40" width="267" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -81,7 +81,6 @@
                                             <outlet property="descriptionLabel" destination="hPD-iy-gvc" id="EOD-3q-Yz1"/>
                                             <outlet property="logoView" destination="FBx-wH-ZCg" id="fQ9-gb-ur7"/>
                                             <outlet property="subjectLabel" destination="NSX-Of-x8c" id="9C8-zF-Jag"/>
-                                            <segue destination="Gkk-CO-ISX" kind="presentation" identifier="questionSegue" id="ezL-GV-f3F"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -102,6 +101,7 @@
                     <connections>
                         <outlet property="settingsButton" destination="AbL-jm-LI1" id="jXu-bK-kOL"/>
                         <outlet property="tableView" destination="1fI-hR-RX5" id="rGc-gf-hoa"/>
+                        <segue destination="Gkk-CO-ISX" kind="presentation" identifier="questionSegue" id="BKb-kO-hVZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -151,8 +151,7 @@
                                 </state>
                                 <state key="disabled" title="Choose Answer"/>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="Gkk-CO-ISX" eventType="touchUpInside" id="mts-N1-6kg"/>
-                                    <segue destination="vgu-c0-JPY" kind="presentation" id="Lkw-su-mnD"/>
+                                    <segue destination="vgu-c0-JPY" kind="presentation" identifier="questionToAnswer" id="DNG-o9-lg6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvG-tM-CBj">
@@ -216,26 +215,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="question goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFj-hB-8F1">
-                                <rect key="frame" x="16" y="121.5" width="343" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="question goes here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFj-hB-8F1">
+                                <rect key="frame" x="16" y="121.5" width="343" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qO7-GX-2Ft">
-                                <rect key="frame" x="16" y="164.5" width="343" height="34"/>
+                                <rect key="frame" x="16" y="164" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAL-sO-Q9n">
-                                <rect key="frame" x="16" y="206.5" width="343" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer goes here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAL-sO-Q9n">
+                                <rect key="frame" x="16" y="206" width="343" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You got it right! Rock on!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dx8-S2-bwW">
-                                <rect key="frame" x="16" y="413.5" width="343" height="33.5"/>
+                                <rect key="frame" x="16" y="412.5" width="343" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -279,7 +278,10 @@
                         <viewLayoutGuide key="safeArea" id="dm5-TF-dnw"/>
                     </view>
                     <connections>
-                        <outlet property="questionLabel" destination="bl3-WM-The" id="p59-um-xhg"/>
+                        <outlet property="answerLabel" destination="ZAL-sO-Q9n" id="tme-Pa-dp9"/>
+                        <outlet property="feedbackLabel" destination="dx8-S2-bwW" id="MDU-4Z-c0g"/>
+                        <outlet property="nextButton" destination="mzH-Dn-F9o" id="YNL-8F-tgp"/>
+                        <outlet property="questionLabel" destination="FFj-hB-8F1" id="jm3-78-nuX"/>
                         <segue destination="Gkk-CO-ISX" kind="presentation" identifier="answerToQuestion" id="CgF-vy-FQV"/>
                         <segue destination="JSU-cE-vD6" kind="presentation" identifier="answerToFinish" id="Ptq-Gb-315"/>
                     </connections>
@@ -291,7 +293,7 @@
         <!--Finish View Controller-->
         <scene sceneID="2mp-Y5-n9T">
             <objects>
-                <viewController id="JSU-cE-vD6" userLabel="Finish View Controller" customClass="AnswerViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JSU-cE-vD6" userLabel="Finish View Controller" customClass="FinishViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1hy-fo-hi3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,7 +347,8 @@
                         <viewLayoutGuide key="safeArea" id="KCh-e7-ffD"/>
                     </view>
                     <connections>
-                        <outlet property="questionLabel" destination="1hy-fo-hi3" id="SPQ-pk-fwd"/>
+                        <outlet property="feedbackLabel" destination="Wzq-Vt-24l" id="wNt-WJ-B2n"/>
+                        <outlet property="scoreLabel" destination="jSa-Fx-SDb" id="pJn-qo-tjZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCx-2h-JgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

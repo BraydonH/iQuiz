@@ -21,6 +21,11 @@ class QuizTableViewCell: UITableViewCell {
     set { subjectLabel.text = newValue }
   }
   
+  var desc: String? {
+    get { return descriptionLabel?.text }
+    set { descriptionLabel.text = newValue }
+  }
+  
   var logo : UIImage? {
     get { return logoView.image }
     set { logoView.image = newValue }
